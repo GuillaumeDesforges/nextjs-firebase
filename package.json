@@ -2,11 +2,7 @@
   "name": "nextjs-firebase",
   "scripts": {
     "build": "tsc",
-    "serve": "yarn build && firebase emulators:start --only hosting,functions",
-    "shell": "yarn build && firebase functions:shell",
-    "start": "yarn shell",
-    "deploy": "firebase deploy --only hosting,functions",
-    "logs": "firebase functions:log"
+    "deploy": "firebase deploy --only hosting,functions"
   },
   "engines": {
     "node": "12"
