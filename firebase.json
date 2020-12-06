@@ -1,0 +1,32 @@
+{
+  "functions": {
+    "source": ".",
+    "predeploy": [
+      "yarn build",
+      "yarn --cwd my-app build"
+    ],
+    "ignore": [
+      "**/node_modules/**"
+    ]
+  },
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "nextjs"
+      }
+    ]
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": false
+    }
+  }
+}
